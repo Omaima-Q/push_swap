@@ -41,6 +41,12 @@ int	ft_atol(char *str, int *flag)
 	return (number * sign);
 }
 
+/* this function same as atoi you just have to handle the max numbers and min numbers
+2147483647 (INT_MAX) is the maximum value of a signed 32-bit integer.
+2147483648 is INT_MIN (absolute value).
+and flag will handle the overflow cases
+If number exceeds the limits for its sign, it sets *flag = 0 to indicate an error and returns 0.*/
+
 char	**parse_args(int arg_count, char **args)
 {
 	int		i;
